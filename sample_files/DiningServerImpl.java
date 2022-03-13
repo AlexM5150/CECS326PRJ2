@@ -10,6 +10,18 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class DiningServerImpl  implements DiningServer
-{  
+{
+
+	@Override
+	public void takeForks(int philNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void returnForks(int philNumber) {
+		// TODO Auto-generated method stub
+		
+	}  
 	//Your code here
 }
