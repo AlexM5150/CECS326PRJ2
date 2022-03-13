@@ -11,5 +11,6 @@ public class DiningPhilosophers
    public static void main(String args[])
    {
      // Here your code
+     DiningServerImpl start = new DiningServerImpl();
    }
 }
