@@ -73,7 +73,7 @@ public class DiningServerImpl  implements DiningServer
 		philosophers[philNumber].setAction("THINKING");
 		System.out.println("Philosopher " + (philNumber+1) + " is done eating and will now think");
 
-		//check if nieghbors need forks
+		//check if neighbors to see if philosopher can eat 
 		check((philNumber + 4) % 5);
 		check((philNumber + 1) % 5);
 
