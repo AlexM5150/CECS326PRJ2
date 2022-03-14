@@ -20,11 +20,8 @@ public class Philosopher implements Runnable
     public Philosopher(int philNumber, DiningServerImpl table){
         this.philNumber = philNumber;
         this.table = table;
-        //determine inital philisopher action
-        if (philNumber % 1 != 0)
-            this.action = "EATING";
-        else
-            this.action = "THINKING";
+        //set inital philisopher action
+        this.action = "THINKING";
     }
     //Throw exception when thread is interrupted
     private void sleep() throws InterruptedException{
@@ -39,7 +36,7 @@ public class Philosopher implements Runnable
     }
 
     //get philosophers action
-    public String getAction(String action){
+    public String getAction(){
        return this.action;
     }
 
