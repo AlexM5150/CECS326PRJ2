@@ -36,7 +36,7 @@ public class DiningServerImpl  implements DiningServer
 			&& (philosophers[philNumber].getAction() == "WAITING")
 			&& (philosophers[(philNumber + 1) % 5].getAction() != "EATING")){
 				philosophers[philNumber].setAction("EATING");
-				System.out.println("philosopher" + philNumber + "is eating");
+				System.out.println("philosopher " + (philNumber+1) + " is eating");
 				forkConditions[philNumber].signal(); // tells other philosophers something changed
 			}
 	}
@@ -47,7 +47,7 @@ public class DiningServerImpl  implements DiningServer
 		// aquire lock
 		lock.lock();
 		philosophers[philNumber].setAction("WAITING");
-		System.out.println("Philosopher" + philNumber + "is waiting to eat");
+		System.out.println("Philosopher " + (philNumber+1) + " is waiting to eat");
 		//test to see if philosopher can eat
 		check(philNumber);
 		//keep waiting if cannot eat
@@ -71,7 +71,7 @@ public class DiningServerImpl  implements DiningServer
 		// aquire lock
 		lock.lock();
 		philosophers[philNumber].setAction("THINKING");
-		System.out.println("The philosopher is done eating and will now think");
+		System.out.println("Philosopher " + (philNumber+1) + " is done eating and will now think");
 
 		//check if nieghbors need forks
 		check((philNumber + 4) % 5);
