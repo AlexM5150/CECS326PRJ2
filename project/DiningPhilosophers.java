@@ -11,6 +11,6 @@ public class DiningPhilosophers
    public static void main(String args[])
    {
      // Here your code
-     DiningServerImpl monitor = new DiningServerImpl();
+     DiningServerImpl run = new DiningServerImpl();
    }
 }
